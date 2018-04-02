@@ -1,10 +1,37 @@
+
 <!DOCTYPE html>
+ {% load staticfiles %}
 <html lang="en">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>第一个Django网站！</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
+    <div class="page-header">
+        <h1><a href="/">恶九的博客</a></h1>
+    </div>
 
+    <div class = "content container">
+        <div class = "row">
+           <div class="col-md-8">
+                {% for post in posts %}
+        <div class="post">
+            <div class ="date">
+             <p>{{ post.author }}发布于: {{ post.created_date }}</p>
+            </div>
+            <h1><a href="">{{ post.title }}</a></h1>
+
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        </div>
+               </div>
+            </div>
+
+    {% endfor %}
 </body>
+
 </html>
