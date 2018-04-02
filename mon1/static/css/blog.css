@@ -7,7 +7,7 @@
     }
 
     .page-header{
-        background-color: #1c94c4;
+        background-color: #01a469;
         margin-top:0;
         padding:20px 20px 20px 40px;
     }
@@ -48,3 +48,7 @@
     .post h1 a,.post ha a:visited{
         color:#000000;
     }
+.aboutmy{
+    /*background-color: #01a469;*/
+    /*color:#FFFFFF;*/
+}
